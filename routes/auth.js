@@ -6,14 +6,16 @@ const jwt = require('jsonwebtoken');
 
 // DB pool
 const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'e-commerce-db',
+  host: 'bmvzzbteufhymoisty4h-mysql.services.clever-cloud.com',
+  user: 'uee47qml4oiswinncn',             // Replace with your actual username
+  password: 'your_actual_password_here',  // Replace with your actual password
+  database: 'bmvzzbteufhymoisty4h',
+  port: 3306,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
 });
+
 
 // --- Signup (plain-text password) ---
 router.post('/signup', async (req, res) => {
